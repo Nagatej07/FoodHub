@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f9f7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Container and form styling */
+.container, .form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Typography */
+h1, h2 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Input and Select Fields */
+input, select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* Links */
+a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+.links {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+/* Updated Checkbox Label Styling */
+label {
+    display: flex;
+    align-items: flex-start;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin: 10px 0;
+    gap: 8px;
+    text-align: left;
+}
+
+label input[type="checkbox"] {
+    width: auto;
+    min-width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+/* Responsive Media Queries - Using a more graduated approach */
+@media (max-width: 992px) {
+    .container, .form-container {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .form-container {
+        max-width: 340px;
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container, .form-container {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+    
+    button {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container, .form-container {
+        padding: 1.25rem;
+    }
+    
+    button {
+        padding: 10px;
+    }
+}
+
+/* Fix for checkbox alignment on small screens */
+@media (max-width: 576px) {
+    label {
+        padding: 0 5px;
+    }
+    
+    label input[type="checkbox"] {
+        flex-shrink: 0;
+    }
+}
